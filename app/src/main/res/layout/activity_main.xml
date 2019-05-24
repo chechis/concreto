@@ -8,74 +8,200 @@
     tools:context=".MainActivity">
 
 
-
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ingrese la resistencia"/>
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/edit_resistencia"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingrese la resistencia"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/edit_resistencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="kg/cm2"
+                    android:inputType="number" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp">
+            android:layout_marginRight="15dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Factor de seguridad"/>
 
-            <EditText
+            <Spinner
+                android:id="@+id/spinner_asignatura"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="kg/cm2"
-                android:inputType="number" />
+                android:layout_weight="1"
+                android:entries="@array/spinner_factor"/>
 
-        </android.support.design.widget.TextInputLayout>
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Elemento estructural"/>
+
+            <Spinner
+                android:id="@+id/spinner_estudiante"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/spinner_elemento"/>
+
+        </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tamaño máximo nominal"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/edit_tmn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pulgadas"
+                    android:inputType="number" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Peso unitario del concreto asumido"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/edit_peso_concreto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="kg/m3"
+                    android:inputType="number" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Peso unitario del agregado fino"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/edit_peso_fino_suelto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Suelto en kg/m3"
+                    android:inputType="number" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/edit_peso_fino_compactado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Compactado en kg/m3"
+                    android:inputType="number" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Peso unitario del agregado grueso"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/edit_peso_grueso_suelto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Suelto en kg/m3"
+                    android:inputType="number" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/edit_peso_grueso_compactado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="70dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Compactado en kg/m3"
+                    android:inputType="number" />
+
+            </android.support.design.widget.TextInputLayout>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <TextView
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Factor de seguridad"/>
 
-        <Spinner
-            android:id="@+id/spinner_asignatura"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:entries="@array/spinner_factor"/>
-
-        <TextView
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Elemento estructural"/>
-
-        <Spinner
-            android:id="@+id/spinner_estudiante"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:entries="@array/spinner_elemento"/>
-
-    </LinearLayout>
-
-
-    </LinearLayout>
-
+        </LinearLayout>
+    </ScrollView>
 
 
 
