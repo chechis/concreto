@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 
 public class AdapterProporcion extends RecyclerView.Adapter<AdapterProporcion.ConcretoHolder> {
 
-    
+
 
     public class ConcretoHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
