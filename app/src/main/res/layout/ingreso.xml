@@ -78,29 +78,23 @@
                     android:layout_weight="1"
                     android:entries="@array/spinner_elemento"/>
 
-            </LinearLayout>
+                <TextView
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tamaño máximo nominal"/>
 
-            <TextView
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="30dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tamaño máximo nominal"/>
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/edit_tmn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp">
-
-                <EditText
+                <Spinner
+                    android:id="@+id/spinner_tmn"
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Pulgadas"
-                    android:inputType="number" />
+                    android:layout_weight="1"
+                    android:entries="@array/spinner_tmn"/>
 
-            </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
 
             <TextView
                 android:layout_marginTop="30dp"
