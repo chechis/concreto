@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import silicato_gris.myapplication.R;
+
 public class AdapterProporcion extends RecyclerView.Adapter<AdapterProporcion.ConcretoHolder> {
 
     private ProporcionListener proporcionListener;
@@ -30,6 +32,13 @@ public class AdapterProporcion extends RecyclerView.Adapter<AdapterProporcion.Co
 
         public ConcretoHolder (View itemView){
             super(itemView);
+            txtAguaCemento = (TextView) itemView.findViewById(R.id.txt_proporcion_ac);
+            txtAsentamiento = (TextView) itemView.findViewById(R.id.txt_proporcion_asentamiento);
+            txtPropUnitaria = (TextView) itemView.findViewById(R.id.txt_proporcion_unitaria);
+            txtPropVol = (TextView) itemView.findViewById(R.id.txt_proporcion_volumetrica);
+
+            btnEditar = (ImageButton) itemView.findViewById(R.id.btn_proporcion_edit);
+            btnEditar.setOnClickListener();
 
         }
 
