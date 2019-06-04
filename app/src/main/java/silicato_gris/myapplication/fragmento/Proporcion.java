@@ -1,4 +1,4 @@
-package silicato_gris.myapplication;
+package silicato_gris.myapplication.fragmento;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -7,19 +7,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class Cantidad extends Fragment {
+import silicato_gris.myapplication.R;
+
+public class Proporcion extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.cantidad, container, false);
+        View view = inflater.inflate(R.layout.proporcion, container, false);
         return view;
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        getActivity().setTitle("Cantidad de material");
+        getActivity().setTitle("Propocion de la mezcla");
     }
+
 
 }

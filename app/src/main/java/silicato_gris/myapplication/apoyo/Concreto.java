@@ -2,18 +2,30 @@ package silicato_gris.myapplication.apoyo;
 
 public class Concreto {
 
+    public enum Tmn {
+        tresOctavos, media, tresCuartos, una, unaYMedia
+
+    }
+    public enum Asentamiento{
+        cinco, ocho, diez
+    }
+
+    public enum Factor{
+        cero, veinticinco, treinta, treintaYCinco, cuarenta, cincuenta
+    }
+
     private int id;
     private int resistencia;
-    private int factor;
+    private Factor factor;
     private int elemento;
-    private int tmn;
+    private Tmn tmn;
     private int pesoConcreto;
     private int pesoSueltoFino;
     private int pesoCompactadoFino;
     private int pesoSueltoGrueso;
     private int pesoCompactadoGrueso;
     private int aguaCemento;
-    private int asentamiento;
+    private Asentamiento asentamiento;
     private int propUnitaria;
     private int propVol;
 
@@ -21,7 +33,7 @@ public class Concreto {
     public Concreto() {
     }
 
-    public Concreto(int id, int resistencia, int factor, int elemento, int tmn, int pesoConcreto, int pesoSueltoFino, int pesoCompactadoFino, int pesoSueltoGrueso, int pesoCompactadoGrueso, int aguaCemento, int asentamiento, int propUnitaria, int propVol) {
+    public Concreto(int id, int resistencia, Factor factor, int elemento, Tmn tmn, int pesoConcreto, int pesoSueltoFino, int pesoCompactadoFino, int pesoSueltoGrueso, int pesoCompactadoGrueso, int aguaCemento, Asentamiento asentamiento, int propUnitaria, int propVol) {
         this.id = id;
         this.resistencia = resistencia;
         this.factor = factor;
@@ -38,7 +50,7 @@ public class Concreto {
         this.propVol = propVol;
     }
 
-    public Concreto(int resistencia, int factor, int elemento, int tmn, int pesoConcreto, int pesoSueltoFino, int pesoCompactadoFino, int pesoSueltoGrueso, int pesoCompactadoGrueso, int aguaCemento, int asentamiento, int propUnitaria, int propVol) {
+    public Concreto(int resistencia, Factor factor, int elemento, Tmn tmn, int pesoConcreto, int pesoSueltoFino, int pesoCompactadoFino, int pesoSueltoGrueso, int pesoCompactadoGrueso, int aguaCemento, Asentamiento asentamiento, int propUnitaria, int propVol) {
         this.resistencia = resistencia;
         this.factor = factor;
         this.elemento = elemento;
@@ -70,11 +82,11 @@ public class Concreto {
         this.resistencia = resistencia;
     }
 
-    public int getFactor() {
+    public Factor getFactor() {
         return factor;
     }
 
-    public void setFactor(int factor) {
+    public void setFactor(Factor factor) {
         this.factor = factor;
     }
 
@@ -86,11 +98,11 @@ public class Concreto {
         this.elemento = elemento;
     }
 
-    public int getTmn() {
+    public Tmn getTmn() {
         return tmn;
     }
 
-    public void setTmn(int tmn) {
+    public void setTmn(Tmn tmn) {
         this.tmn = tmn;
     }
 
@@ -142,11 +154,11 @@ public class Concreto {
         this.aguaCemento = aguaCemento;
     }
 
-    public int getAsentamiento() {
+    public Asentamiento getAsentamiento() {
         return asentamiento;
     }
 
-    public void setAsentamiento(int asentamiento) {
+    public void setAsentamiento(Asentamiento asentamiento) {
         this.asentamiento = asentamiento;
     }
 

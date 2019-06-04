@@ -1,4 +1,4 @@
-package silicato_gris.myapplication;
+package silicato_gris.myapplication.fragmento;
 
 
 import android.app.Fragment;
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import silicato_gris.myapplication.R;
 
 public class Ingreso extends Fragment {
 
