@@ -15,13 +15,6 @@ import silicato_gris.myapplication.fragmento.Proporcion;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    Ingreso ingreso = new Ingreso();
-    Proporcion proporcion = new Proporcion();
-    Cantidad cantidad = new Cantidad();
-
-    //FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -30,31 +23,19 @@ public class MainActivity extends AppCompatActivity {
 
 
             switch (item.getItemId()) {
-
-
                 case R.id.navigation_home:
                     getSupportFragmentManager().
                             beginTransaction().replace(R.id.contenedor, new Ingreso()).commit();
-
-
                     break;
-
                 case R.id.navigation_dashboard:
                     getSupportFragmentManager().
                             beginTransaction().replace(R.id.contenedor, new Proporcion()).commit();
-
-
                     break;
-
                 case R.id.navigation_notifications:
-
                     getSupportFragmentManager().
                             beginTransaction().replace(R.id.contenedor, new Cantidad()).commit();
-
-
                     break;
             }
-
             return true;
         }
     };
@@ -67,15 +48,8 @@ public class MainActivity extends AppCompatActivity {
 
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-
            getSupportFragmentManager().beginTransaction().
-                    add(R.id.contenedor, ingreso).commit();
-
-
-
-        //fragmentTransaction.add(R.id.contenedor, ingreso);
-        //fragmentTransaction.commit();
-
+                    add(R.id.contenedor, new Ingreso()).commit();
 
     }
 
