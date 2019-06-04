@@ -3,6 +3,7 @@ package silicato_gris.myapplication;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.annotation.NonNull;
 import android.view.MenuItem;
@@ -19,56 +20,42 @@ public class MainActivity extends AppCompatActivity {
     Proporcion proporcion = new Proporcion();
     Cantidad cantidad = new Cantidad();
 
-    FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-    int numero;
+    //FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+
             switch (item.getItemId()) {
+
+
                 case R.id.navigation_home:
+                    getSupportFragmentManager().
+                            beginTransaction().replace(R.id.contenedor, new Ingreso()).commit();
 
-                    if (numero != 1){
-                    fragmentTransaction.replace(R.id.contenedor, ingreso);
-                    fragmentTransaction.commit();
-                    numero = 1;
-                    }else {
-                        Toast.makeText(MainActivity.this, "Ya te encuentras en esta vista", Toast.LENGTH_SHORT).show();
 
-                    }
-
-                    return true;
+                    break;
 
                 case R.id.navigation_dashboard:
+                    getSupportFragmentManager().
+                            beginTransaction().replace(R.id.contenedor, new Proporcion()).commit();
 
-                    if (numero != 2){
-                        fragmentTransaction.replace(R.id.contenedor, proporcion);
-                        fragmentTransaction.commit();
-                        numero = 2;
-                    }else {
-                        Toast.makeText(MainActivity.this, "Ya te encuentras en esta vista", Toast.LENGTH_SHORT).show();
 
-                    }
-
-                    return true;
+                    break;
 
                 case R.id.navigation_notifications:
 
-                    if (numero != 3){
-                        fragmentTransaction.replace(R.id.contenedor, cantidad);
-                        fragmentTransaction.commit();
-                        numero = 3;
-                    }else {
-                        Toast.makeText(MainActivity.this, "Ya te encuentras en esta vista", Toast.LENGTH_SHORT).show();
-
-                    }
+                    getSupportFragmentManager().
+                            beginTransaction().replace(R.id.contenedor, new Cantidad()).commit();
 
 
-                    return true;
+                    break;
             }
-            return false;
+
+            return true;
         }
     };
 
@@ -80,9 +67,15 @@ public class MainActivity extends AppCompatActivity {
 
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        fragmentTransaction.add(R.id.contenedor, ingreso);
-        fragmentTransaction.commit();
-        numero = 1;
+
+           getSupportFragmentManager().beginTransaction().
+                    add(R.id.contenedor, ingreso).commit();
+
+
+
+        //fragmentTransaction.add(R.id.contenedor, ingreso);
+        //fragmentTransaction.commit();
+
 
     }
 
