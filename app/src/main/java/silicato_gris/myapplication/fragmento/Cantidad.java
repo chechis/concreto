@@ -14,7 +14,7 @@ public class Cantidad extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.cantidad, container, false);
+        View view = inflater.inflate(R.layout.fragment_cantidad, container, false);
         return view;
     }
 

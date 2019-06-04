@@ -15,7 +15,7 @@ public class Ingreso extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.ingreso, container, false);
+        View view = inflater.inflate(R.layout.fragment_ingreso, container, false);
         return view;
     }
 

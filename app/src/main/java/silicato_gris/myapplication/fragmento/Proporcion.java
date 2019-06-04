@@ -14,7 +14,7 @@ public class Proporcion extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.proporcion, container, false);
+        View view = inflater.inflate(R.layout.fragment_proporcion, container, false);
         return view;
     }
 
